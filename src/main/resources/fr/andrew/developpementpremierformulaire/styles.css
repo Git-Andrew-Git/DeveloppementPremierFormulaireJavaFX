@@ -1,0 +1,21 @@
+.title-bar {
+    -fx-background-color: #1E90FF !important;
+}
+
+.title-bar .label {
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold !important;
+}
+
+.window-buttons {
+    -fx-background-color: #1E90FF !important;
+}
+
+.window-buttons .button {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: white !important;
+}
+
+.window-buttons .button:hover {
+    -fx-background-color: derive(#1E90FF, -10%) !important;
+}
