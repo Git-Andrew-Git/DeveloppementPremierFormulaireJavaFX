@@ -82,18 +82,24 @@ public class HelloApplication extends Application {
         var button1 = new Button("Recopier");
         var button2 = new Button("Effacer");
         var button3 = new Button("Quitter");
+        button3.setOnAction(actionEvent -> stage.close());
 
-        var textfield1 = new TextField();
-        var textfield2 = new TextField();
+        var textField1 = new TextField();
+        var textField2 = new TextField();
+        button1.setOnAction(actionEvent -> {
+            String text = textField1.getText();
+            textField2.setText(text);
+        });
+        button2.setOnAction(actionEvent -> textField2.setText(""));
 
-        textfield1.setPromptText("Saisissez un texte");
-        textfield2.setPromptText("Saisissez un texte");
-        root.setGridLinesVisible(true);
+        textField1.setPromptText("Saisissez un texte");
+        textField2.setPromptText("Saisissez un texte");
+//        root.setGridLinesVisible(true);
 
         root.add(label1, 0, 1, 2, 1);
         root.add(label2,0,3, 2, 1);
-        root.add(textfield1, 2, 1, 3, 1);
-        root.add(textfield2, 2, 3, 3, 1);
+        root.add(textField1, 2, 1, 3, 1);
+        root.add(textField2, 2, 3, 3, 1);
 
         VBox vBox = new VBox();
         root.add(vBox, 5, 0, 2, 5);
@@ -134,8 +140,8 @@ public class HelloApplication extends Application {
 
         GridPane.setHalignment(label1, HPos.CENTER);
         GridPane.setHalignment(label2, HPos.CENTER);
-        GridPane.setHalignment(textfield1, HPos.CENTER);
-        GridPane.setHalignment(textfield2, HPos.CENTER);
+        GridPane.setHalignment(textField1, HPos.CENTER);
+        GridPane.setHalignment(textField2, HPos.CENTER);
 //        GridPane.setHalignment(button1, HPos.CENTER);
 //        GridPane.setHalignment(button2, HPos.CENTER);
 //        GridPane.setHalignment(button3, HPos.CENTER);
@@ -143,8 +149,8 @@ public class HelloApplication extends Application {
 
         GridPane.setValignment(label1, VPos.CENTER);
         GridPane.setValignment(label2, VPos.CENTER);
-        GridPane.setValignment(textfield1, VPos.CENTER);
-        GridPane.setValignment(textfield2, VPos.CENTER);
+        GridPane.setValignment(textField1, VPos.CENTER);
+        GridPane.setValignment(textField2, VPos.CENTER);
 //        GridPane.setValignment(button1, VPos.CENTER);
 //        GridPane.setValignment(button2, VPos.CENTER);
 //        GridPane.setValignment(button3, VPos.CENTER);
