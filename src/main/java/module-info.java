@@ -1,4 +1,5 @@
 module fr.andrew.developpementpremierformulaire {
+    // TODO supprimer dépendances FXML superflues (nous en ferons à partir de l'exercice 7)
     requires javafx.fxml;
     requires javafx.web;
 

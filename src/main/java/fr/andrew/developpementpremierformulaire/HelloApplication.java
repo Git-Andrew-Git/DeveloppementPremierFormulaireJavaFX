@@ -19,6 +19,7 @@ import java.net.URL;
 
 public class HelloApplication extends Application {
 
+    // TODO ajouter "transitive" après "requires" de la ligne "requires org.controlsfx.controls" du fichier "module-info"
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -166,6 +167,7 @@ public class HelloApplication extends Application {
         stage.setScene(decoratedScene);
 
         // === Load External CSS File ===
+        // J'apprécie particulièrement le style :)
         URL cssUrl = getClass().getResource("/fr/andrew/developpementpremierformulaire/styles.css");
         if (cssUrl != null) {
             decoratedScene.getStylesheets().add(cssUrl.toExternalForm());
